@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class PalindromeTest {
 
     @Test
-    public void count_withMany_returnsInt() {
+    public void count_withPalindrome1_returnsInt() {
         //Setup
         String inputString = "tacocat";
         //Exercise
@@ -17,5 +17,18 @@ class PalindromeTest {
         assertEquals(expected, actual);
         //Teardown
     }
+
+    @Test
+    public void count_withPalindrome2_returnsInt() {
+        //Setup
+        String inputString = "this_is_a_palindrome_emordnilap_a_si_siht";
+        //Exercise
+        Integer expected = 63;
+        Integer actual = Palindrome.count(inputString);
+        //Assert
+        assertEquals(expected, actual);
+        //Teardown
+    }
+
 
 }
