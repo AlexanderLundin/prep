@@ -17,6 +17,9 @@ class AddTwoNumbersTest {
     //Examples and Edge Cases
     //  List examples from problem
     //  Think of edge cases at boundary values, 0 and 1 are typical
+    //  Input: (2 -> 4 -> 3) + (5 -> 6 -> 4)
+    //  Output: 7 -> 0 -> 8
+    //  Explanation: 342 + 465 = 807.
     AddTwoNumbers.ListNode l1;
     AddTwoNumbers.ListNode l2;
     AddTwoNumbers.ListNode l3;
@@ -27,7 +30,7 @@ class AddTwoNumbersTest {
     AddTwoNumbers.ListNode actual;
 
     @Test
-    public void addTwoNumbers_returns807() {
+    public void addTwoNumbers_returnsNodeWithValue7() {
         //Setup
         l3 = new AddTwoNumbers.ListNode(2);
         l2 = new AddTwoNumbers.ListNode(4, l3);
@@ -35,7 +38,7 @@ class AddTwoNumbersTest {
         l6 = new AddTwoNumbers.ListNode(5);
         l5 = new AddTwoNumbers.ListNode(6, l6);
         l4 = new AddTwoNumbers.ListNode(4, l5);
-        expected = new AddTwoNumbers.ListNode(807);
+        expected = new AddTwoNumbers.ListNode(7);
         //Exercise
         actual = AddTwoNumbers.addTwoNumbers(l1,l4);
         //Assert

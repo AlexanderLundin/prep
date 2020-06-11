@@ -20,7 +20,23 @@ public class AddTwoNumbers {
         }
         int value1 = Integer.parseInt(accumulator1);
         int value2 = Integer.parseInt(accumulator2);
-        return new ListNode(value1 + value2);
+        int result = value1 + value2;
+        String resultString = "" + result;
+        String reverse = "";
+        String character = "";
+        ListNode currentNode;
+        ListNode previousNode = null;
+        for (int i = 0; i < resultString.length(); i++) {
+            character = resultString.substring(i, i+1);
+            if (previousNode != null){
+                currentNode = new ListNode(Integer.parseInt(character), previousNode);
+            }else{
+                currentNode = new ListNode(Integer.parseInt(character));
+            }
+            reverse = character + reverse;
+            previousNode = currentNode;
+        }
+        return previousNode;
     }
 
     public static class ListNode {
