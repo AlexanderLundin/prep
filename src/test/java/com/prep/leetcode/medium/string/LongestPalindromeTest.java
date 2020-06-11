@@ -40,4 +40,16 @@ class LongestPalindromeTest {
         assertEquals(expected, actual);
         //Teardown
     }
+
+    @Test
+    public void longestPalindrome_with_cbbd_returns_bb() {
+        //Setup
+        input = "cbbd";
+        expected = "bb";
+        //Exercise
+        actual = testClass.longestPalindrome(input);
+        //Assert
+        assertEquals(expected, actual);
+        //Teardown
+    }
 }
