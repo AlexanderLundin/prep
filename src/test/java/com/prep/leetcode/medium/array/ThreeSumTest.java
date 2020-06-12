@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -37,6 +38,12 @@ class ThreeSumTest {
     public void threeSum_withArray_returnsListofLists() {
         //Setup
         input = new int[]{-1, 0, 1, 2, -1, -4};
+        int [] solution1 = new int[]{-1,0,1};
+        int [] solution2 = new int[]{-1,-1,2};
+//        List l1 = Arrays.asList(solution1);
+//        List l2 = Arrays.asList(solution2);
+//        expected.add(l1);
+//        expected.add(l2);
         //Exercise
         actual = testClass.threeSum(input);
         //Assert
