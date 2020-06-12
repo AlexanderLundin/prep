@@ -2,9 +2,14 @@ package com.prep.leetcode.medium.array;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
-class ContainerWithMostWaterTest {
+import static org.junit.jupiter.api.Assertions.*;
+
+class ThreeSumTest {
     //Alex Lundin
     //OICE - An effective way to consume requirements
     //Output
@@ -17,20 +22,23 @@ class ContainerWithMostWaterTest {
     //Examples and Edge Cases
     //  List examples from problem
     //  Think of edge cases at boundary values, 0 and 1 are typical
-    //  Input:
-    //  Output: 49
+    //  Given array nums = [-1, 0, 1, 2, -1, -4],
+    //  A solution set is:
+    //        [
+    //        [-1, 0, 1],
+    //        [-1, -1, 2]
+    //        ]
     int[] input;
-    int expected;
-    int actual;
-    ContainerWithMostWater testClass = new ContainerWithMostWater();
+    List<List<Integer>> expected;
+    List<List<Integer>> actual;
+    ThreeSum testClass = new ThreeSum();
 
     @Test
-    public void maxArea_withInput_returns49() {
+    public void threeSum_withArray_returnsListofLists() {
         //Setup
-        input = new int[]{1, 8, 6, 2, 5, 4, 8, 3, 7};
-        expected = 49;
+        input = new int[]{-1, 0, 1, 2, -1, -4};
         //Exercise
-        actual = testClass.maxArea(input);
+        actual = testClass.threeSum(input);
         //Assert
         assertEquals(expected, actual);
         //Teardown
