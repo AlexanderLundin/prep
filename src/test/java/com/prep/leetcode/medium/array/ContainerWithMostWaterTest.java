@@ -1,5 +1,7 @@
 package com.prep.leetcode.medium.array;
 
+import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class ContainerWithMostWaterTest {
@@ -15,5 +17,21 @@ class ContainerWithMostWaterTest {
     //Examples and Edge Cases
     //  List examples from problem
     //  Think of edge cases at boundary values, 0 and 1 are typical
-
+    //  Input:
+    //  Output: 49
+    int[] input;
+    int expected;
+    int actual;
+    ContainerWithMostWater testClass = new ContainerWithMostWater();
+    @Test
+    public void maxArea_withInput_returns49() {
+        //Setup
+        input = new int[]{1,8,6,2,5,4,8,3,7};
+        expected = 49;
+        //Exercise
+        actual = testClass.maxArea(input);
+        //Assert
+        assertEquals(expected, actual);
+        //Teardown
+    }
 }
