@@ -7,33 +7,20 @@ import java.util.ArrayList;
 public class DisplayAllPairs {
 
     /* This method returns a Pair which hasmaximum score*/
-    public static Pair<String,Integer>
-    getMaximum(ArrayList< Pair <String,Integer> > l)
+    public static void
+    printChars(Pair <Character,Character> p)
     {
-        // Assign minimum value initially
-        int max = Integer.MIN_VALUE;
 
-        // Pair to store the maximum marks of a
-        // student with its name
-        Pair <String, Integer> ans =
-                new Pair <String, Integer> ("", 0);
+        char key = p.getKey();
+        char value = p.getValue();
 
-        // Using for each loop to iterate array of
-        // Pair Objects
-        for (Pair <String,Integer> temp : l)
-        {
-            // Get the score of Student
-            int val = temp.getValue();
+        int min = (int)key;
+        int max = (int)value;
 
-            // Check if it is greater than the previous
-            // maximum marks
-            if (val > max)
-            {
-                max = val;  // update maximum
-                ans = temp; // update the Pair
-            }
+        for (int i = min; i <= max; i++) {
+            System.out.println((char) i);
+
         }
-        return ans;
     }
 
     // Driver method to test above method
@@ -42,22 +29,16 @@ public class DisplayAllPairs {
         int n = 5;//Number of Students
 
         //Create an Array List
-        ArrayList <Pair <String,Integer> > l =
-                new ArrayList <Pair <String,Integer> > ();
+        ArrayList <Pair <Character,Character> > l =
+                new ArrayList <Pair <Character,Character> > ();
 
         /*  Create pair of name of student  with their
             corresponding score and insert into the
             Arraylist */
-        l.add(new Pair <String,Integer> ("Student A", 90));
-        l.add(new Pair <String,Integer> ("Student B", 54));
-        l.add(new Pair <String,Integer> ("Student C", 99));
-        l.add(new Pair <String,Integer> ("Student D", 88));
-        l.add(new Pair <String,Integer> ("Student E", 89));
+        Pair p = new Pair <Character,Character> ('a', 'd');
+        l.add(p);
 
-        // get the Pair which has maximum value
-        Pair <String,Integer> ans = getMaximum(l);
+        printChars(p);
 
-        System.out.println(ans.getKey() + " is top scorer " +
-                "with score of " + ans.getValue());
     }
 }
