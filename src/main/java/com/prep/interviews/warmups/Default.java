@@ -1,7 +1,7 @@
 package com.prep.interviews.warmups;
 
 public class Default {
-    
+
     public void printer (int[] arr){
         for (int i = 0; i < arr.length; i++){
             System.out.println(arr[i]);
