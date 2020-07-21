@@ -23,11 +23,11 @@ public class BinaryTreeContains {
         if (node.data == key)
             return true;
 
-        // then recur on left sutree /
+        // then recur on left subtree
         boolean res1 = ifNodeExists(node.left, key);
         if(res1) return true; // node found, no need to look further
 
-        // node is not found in left, so recur on right subtree /
+        // node is not found in left, so recur on right subtree
         boolean res2 = ifNodeExists(node.right, key);
 
         return res2;
