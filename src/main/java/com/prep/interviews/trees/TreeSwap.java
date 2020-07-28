@@ -23,23 +23,23 @@ public class TreeSwap {
 
     // A utility function swap left- node & right node of tree
     // of every k'th level
-    static void swapEveryKLevelUtil(Node root, int level, int k) {
+    static void swapEveryKLevelUtil(Node current, int level, int k) {
         // base case
-        if (root == null ||
-                (root.left == null && root.right == null))
+        if (current == null ||
+                (current.left == null && current.right == null))
             return;
 
         //if current level + 1 is present in swap vector
         //then we swap left & right node
         if ((level + 1) % k == 0) {
-            Node temp = root.left;
-            root.left = root.right;
-            root.right = temp;
+            Node temp = current.left;
+            current.left = current.right;
+            current.right = temp;
         }
 
         // Recur for left and right subtrees
-        swapEveryKLevelUtil(root.left, level + 1, k);
-        swapEveryKLevelUtil(root.right, level + 1, k);
+        swapEveryKLevelUtil(current.left, level + 1, k);
+        swapEveryKLevelUtil(current.right, level + 1, k);
     }
 
     // This function mainly calls recursive function
